@@ -10,18 +10,21 @@ function CadastroItem(){
     return(
         <View  style={styles.cadrastroIngredientes}>
         
-                                <TextInput>
-
-                                </TextInput>
+            <TextInput 
+                style={styles .inserirNomeIngrediente}
+                value={nomeIngrediente}
+                onChangeText={setnomeingrediente}
+             />
         
-                                <Text>
-                                    R$ 
-                                </Text>
-        
-                                <TextInput>
-                    
-                                </TextInput>
-              
+            <Text>
+              R$ 
+            </Text>
+       
+        <TextInput
+            style={styles.inserirPrecoIngrediente}
+            value={precoIngrediente}
+            onChangeText={setprecoingrediente}
+        />
         </View>
     )
 }
@@ -30,13 +33,32 @@ function CadastroItem(){
 const styles = StyleSheet.create({
     
     cadrastroIngredientes: {
-        paddingTop: 10,
+        gap: 20,
         margin: 1,
         borderWidth: 2,
         borderRadius: 10,
         flexDirection: "row",
-        borderColor: "pink"
+        borderColor: "pink",
+        alignItems: "center"
     },
+
+    inserirNomeIngrediente: {
+        flex: 2,
+        width: 1,
+        margin: 1,
+        borderWidth: 2,
+        borderColor: "orange"
+        
+    },
+
+    inserirPrecoIngrediente: {
+        flex: 1,
+        width: 1,
+        margin: 1,
+        borderWidth: 2,
+        borderColor: "orange"
+        
+    }
 
 });
 
