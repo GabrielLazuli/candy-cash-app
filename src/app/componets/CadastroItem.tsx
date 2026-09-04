@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     },
 
     inserirNomeIngrediente: {
-        flex: 2,
+        flex: 3,
         width: 1,
         margin: 1,
         borderWidth: 2,

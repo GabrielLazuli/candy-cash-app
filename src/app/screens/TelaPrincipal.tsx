@@ -1,5 +1,7 @@
 import { StyleSheet, Text, TextInput, View } from "react-native";
 import CadastroItem from "../componets/CadastroItem";
+import TelaInsumos from "./TelaInsumos";
+import { Button } from "expo-router/build/react-navigation";
 
 function TelaPrincipal(){
 
@@ -21,10 +23,6 @@ function TelaPrincipal(){
 
             <View style={styles.cadastroReceita}>
 
-                <Text style={styles.textNormal}>
-                    Nome do Produto:
-                </Text>
-
                 <TextInput style={styles.InputNomeReceita}>
 
                 </TextInput>
@@ -34,7 +32,7 @@ function TelaPrincipal(){
                         Ingredientes e Custos:
                     </Text>
 
-                 <CadastroItem/>
+                 <TelaInsumos/>
 
                 </View>
 
