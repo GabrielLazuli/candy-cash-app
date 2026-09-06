@@ -25,7 +25,11 @@ function CadastroItem(){
             value={precoIngrediente}
             onChangeText={setprecoingrediente}
         />
+
+    
+
         </View>
+
     )
 }
 
@@ -33,6 +37,7 @@ function CadastroItem(){
 const styles = StyleSheet.create({
     
     cadrastroIngredientes: {
+        flex: 4,
         gap: 20,
         margin: 1,
         borderWidth: 2,

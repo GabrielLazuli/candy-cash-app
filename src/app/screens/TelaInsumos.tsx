@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, ScrollView, Text, StyleSheet, View } from "react-native";
+import { Button, ScrollView, Text, StyleSheet, View, Pressable } from "react-native";
 import CadastroItem from "../componets/CadastroItem";
 
 
@@ -19,6 +19,13 @@ import CadastroItem from "../componets/CadastroItem";
 
     };
 
+    const removerItem = (itemAserRemovido) => {
+
+       const novaLista = item.filter((item) => item.id !== itemAserRemovido);
+       setitem(novaLista);
+    }
+
+
     return(
     <ScrollView>
 
@@ -26,17 +33,25 @@ import CadastroItem from "../componets/CadastroItem";
                  <Text style={styles.textNormal}>
                     Nome do Produto:
                 </Text>
-                  <Button style={styles.button} title="Adiconar item" onPress={adicionaNovoItem}/>
+                  <Button title="Adiconar item" onPress={adicionaNovoItem}/>
              </View>
        
         {
             // map iterando e a cada item ele renderiza um componente
             item.map((item) => (
-             <CadastroItem key={item.id}/>
+             
+             <View style={{flex: 1, flexDirection: "row", alignItems: "center"}}>
+                 <CadastroItem key={item.id}/>
+                 <Pressable style={styles.buttonRemover}onPress={() => removerItem(item.id)}>
+                    <Text style={styles.textButtonRemover}>
+                        X
+                    </Text>
+                 </Pressable>
+              </View>
             )
             )
+        
         }
-
     </ScrollView>
     )
 }
@@ -58,6 +73,16 @@ const styles = StyleSheet.create({
 
     button: {
         borderRadius: 10
+    },
+
+    buttonRemover: {
+        width: 40,
+        height: 40,
+        justifyContent: "center",
+    },
+
+    textButtonRemover: {
+      textAlign: "center",
     }
 
 })
