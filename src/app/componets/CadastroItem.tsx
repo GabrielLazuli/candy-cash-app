@@ -44,25 +44,18 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         flexDirection: "row",
         borderColor: "pink",
-        alignItems: "center"
+        alignItems: "center",
+        marginBottom: 10
     },
 
     inserirNomeIngrediente: {
         flex: 3,
         width: 1,
-        margin: 1,
-        borderWidth: 2,
-        borderColor: "orange"
-        
     },
 
     inserirPrecoIngrediente: {
         flex: 1,
         width: 1,
-        margin: 1,
-        borderWidth: 2,
-        borderColor: "orange"
-        
     }
 
 });
