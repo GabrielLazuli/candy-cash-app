@@ -3,7 +3,7 @@ import CadastroItem from "../componets/CadastroItem";
 import TelaInsumos from "./TelaInsumos";
 import { Button } from "expo-router/build/react-navigation";
 
-function TelaPrincipal() {
+function TelaInsumosPai() {
   return (
     <View style={styles.container}>
       <Text style={styles.textNomeApp}>CANDY CASH</Text>
@@ -64,4 +64,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default TelaPrincipal;
+export default TelaInsumosPai;
