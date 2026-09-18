@@ -1,52 +1,23 @@
 import { useRouter } from "expo-router";
-import { View, Text, StyleSheet, Button } from "react-native";
-
+import { View, Text, StyleSheet, Button, Pressable } from "react-native";
 
 export default function TelaMenu(){
 
     const router = useRouter();
 
     return(
+
         <View>
-            <Button title="Precificar Receitar" onPress={() => {router.push("/tela-insumos")}}/>
+
+            <Pressable style={estilos.button} onPress={() => {router.push("/tela-insumos")}}/>
+                <Text> Precificar Receita</Text>
+            <Pressable/>
+            <Pressable style={estilos.button} onPress={() => {router.push("/tela-precos-produtos")}}/>
+                <Text> Precificar Ingrediente</Text>
+            <Pressable/>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <Button title="Cadastrar ingredientes" onPress={() =>{router.push("/tela-precos-produtos")}}/>
         </View>
-
-
-
-
 
 
 
