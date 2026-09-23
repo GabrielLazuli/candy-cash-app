@@ -24,5 +24,5 @@ export default function TelaMenu(){
 }
 
 const estilos = StyleSheet.create({
-    button: {color: "FFFFFF", backgroundColor: "AFFA00"}
+    button: {color: "FFFFFF", backgroundColor: "AFFA00", padding: 20}
 });
