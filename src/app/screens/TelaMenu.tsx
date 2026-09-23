@@ -9,13 +9,12 @@ export default function TelaMenu(){
 
         <View>
 
-            <Pressable style={estilos.button} onPress={() => {router.push("/tela-insumos")}}/>
+            <Pressable style={estilos.button} onPress={() => {router.push("/tela-insumos")}}>
                 <Text> Precificar Receita</Text>
-            <Pressable/>
-            <Pressable style={estilos.button} onPress={() => {router.push("/tela-precos-produtos")}}/>
+            </Pressable>
+            <Pressable style={estilos.button} onPress={() => {router.push("/tela-precos-produtos")}}>
                 <Text> Precificar Ingrediente</Text>
-            <Pressable/>
-
+            </Pressable>
 
         </View>
 
