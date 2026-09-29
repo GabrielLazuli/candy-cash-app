@@ -7,22 +7,23 @@ export default function TelaMenu(){
 
     return(
 
-        <View>
+        <View style={estilos.viewPrincipal}>
 
             <Pressable style={estilos.button} onPress={() => {router.push("/tela-insumos")}}>
-                <Text> Precificar Receita</Text>
+                <Text style={estilos.textButton}> Precificar Produto</Text>
             </Pressable>
             <Pressable style={estilos.button} onPress={() => {router.push("/tela-precos-produtos")}}>
-                <Text> Precificar Ingrediente</Text>
+                <Text style={estilos.textButton}> Precificar Ingrediente</Text>
             </Pressable>
 
         </View>
 
-
-
     )
+
 }
 
 const estilos = StyleSheet.create({
-    button: {color: "FFFFFF", backgroundColor: "AFFA00", padding: 20}
+    viewPrincipal: {padding: 20},
+    button: {color: "FFFFFF", padding: 20},
+    textButton: {textAlign: "center", backgroundColor: "pink", padding: 20, borderRadius: 5}
 });
